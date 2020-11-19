@@ -11,6 +11,10 @@ For Wordpress projects using a simple NPM script setup
 
 ## Setup
 
+### Copy files from Timber starter theme
+
+[The Timber Starter Theme](https://github.com/timber/starter-theme)
+
 ### Set up default package.json
 
 `npm init -y`
@@ -27,10 +31,10 @@ For Wordpress projects using a simple NPM script setup
 
 ```
 module.exports = {
-plugins: [
-		require('tailwindcss'),
-		require('autoprefixer'),
-	]
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ]
 }
 ```
 
@@ -71,8 +75,8 @@ Add to package.json
 
 ```
 "scripts": {
-	"watch": "cross-env NODE_ENV=development postcss static/css/tailwind.css -o style.css --watch",
-	"build": "cross-env NODE_ENV=production postcss static/css/tailwind.css -o style.css"
+  "watch": "cross-env NODE_ENV=development postcss static/css/tailwind.css -o style.css --watch",
+  "build": "cross-env NODE_ENV=production postcss static/css/tailwind.css -o style.css"
 },
 ```
 
