@@ -21,7 +21,7 @@ For Wordpress projects using a simple NPM script setup
 
 ### Install Tailwind and dependencies
 
-`npm install tailwindcss postcss autoprefixer`
+`npm install tailwindcss postcss autoprefixer postcss-cli`
 
 `npm install cross-env --save-dev`
 
@@ -54,6 +54,8 @@ purge: [
 
 The Timber starter theme has a "static" folder where we add CSS
 
+`touch static/tailwind.css`
+
 ```
 /*
  * Theme Name:
@@ -85,4 +87,26 @@ Run scripts:
 ```
 npm run build
 npm run watch
+```
+
+### Extras
+
+#### Add ACF JSON folder
+
+`mkdir acf-json`
+
+#### Enqueue assets example
+
+```
+// --------------------------------------------------
+// Enqueue Assets
+// --------------------------------------------------
+
+function site_assets() {
+  wp_enqueue_style( 'slick', get_template_directory_uri() . '/inc/slick/slick.css', 'all');
+  wp_enqueue_script( 'slick', get_template_directory_uri() . '/inc/slick/slick.min.js', array('jquery'), '1.0.0', true );
+  wp_enqueue_script( 'site-js', get_template_directory_uri() . '/dist/js/site.min.js', array('jquery'), '1.0.0', true );
+  wp_enqueue_script( 'alpine', 'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js', null, null, true );
+  // wp_enqueue_style( 'typography-css', 'https://cloud.typography.com/7073312/6919812/css/fonts.css');
+}
 ```
