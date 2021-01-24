@@ -77,8 +77,8 @@ Add to package.json
 
 ```
 "scripts": {
-  "watch": "cross-env NODE_ENV=development postcss static/css/tailwind.css -o style.css --watch",
-  "build": "cross-env NODE_ENV=production postcss static/css/tailwind.css -o style.css"
+  "watch": "cross-env NODE_ENV=development postcss static/tailwind.css -o style.css --watch",
+  "build": "cross-env NODE_ENV=production postcss static/tailwind.css -o style.css"
 },
 ```
 
