@@ -109,4 +109,6 @@ function site_assets() {
   wp_enqueue_script( 'alpine', 'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js', null, null, true );
   // wp_enqueue_style( 'typography-css', 'https://cloud.typography.com/7073312/6919812/css/fonts.css');
 }
+
+add_action( 'wp_enqueue_scripts', 'site_assets' );
 ```
