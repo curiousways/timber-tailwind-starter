@@ -21,9 +21,7 @@ For Wordpress projects using a simple NPM script setup
 
 ### Install Tailwind and dependencies
 
-`npm install tailwindcss postcss autoprefixer postcss-cli`
-
-`npm install cross-env --save-dev`
+`npm install -D tailwindcss@latest postcss@latest autoprefixer@latest postcss-cli@latest cross-env@latest`
 
 ### Add Tailwind as a PostCSS plugin
 
